@@ -5,7 +5,7 @@ This script reads JSON from file and prints it in user friendly manner.
 It takes 1 positional arguments:
 * path: path to file.
 
-Fequiremnts:
+Requirements:
 * file should be encoded in UTF-8.
 
 # Quickstart
