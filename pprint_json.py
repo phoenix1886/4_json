@@ -11,8 +11,8 @@ def parse_arguments():
 
 def load_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
-        data = file.read()
-        return data
+        raw_data = file.read()
+        return raw_data
 
 
 def pretty_print_json(data):
@@ -27,7 +27,7 @@ def pretty_print_json(data):
 if __name__ == '__main__':
     arguments = parse_arguments()
     path_to_file = arguments.path
-    data = load_data(path_to_file)
-    json_pretty_string = pretty_print_json(data)
+    raw_data = load_data(path_to_file)
+    json_pretty_string = pretty_print_json(raw_data)
     print(json_pretty_string)
 
