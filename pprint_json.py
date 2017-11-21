@@ -15,8 +15,8 @@ def load_data(filepath):
         return raw_data
 
 
-def pretty_print_json(data):
-    json_obj = json.loads(data, encoding='utf-8')
+def pretty_print_json(raw_data):
+    json_obj = json.loads(raw_data, encoding='utf-8')
     json_pretty_string = json.dumps(json_obj,
                                     ensure_ascii=False,
                                     sort_keys=True,
