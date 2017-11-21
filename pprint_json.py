@@ -15,9 +15,9 @@ def load_data(filepath):
         return raw_data
 
 
-def pretty_print_json(raw_data):
-    json_obj = json.loads(raw_data, encoding='utf-8')
-    json_pretty_string = json.dumps(json_obj,
+def get_json_pretty_string(raw_data):
+    decoded_json = json.loads(raw_data)
+    json_pretty_string = json.dumps(decoded_json,
                                     ensure_ascii=False,
                                     sort_keys=True,
                                     indent=4)
@@ -28,6 +28,6 @@ if __name__ == '__main__':
     arguments = parse_arguments()
     path_to_file = arguments.path
     raw_data = load_data(path_to_file)
-    json_pretty_string = pretty_print_json(raw_data)
+    json_pretty_string = get_json_pretty_string(raw_data)
     print(json_pretty_string)
 
